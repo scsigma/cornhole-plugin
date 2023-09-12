@@ -30,17 +30,18 @@ const App = () => {
   };
 
   return (
-    <div className="cornhole-game" style={{ border: "blue 2px solid", width: "600px", height: "300px"}}>
-      <div className="board" onClick={handleBoardClick} style={{ border: "red 2px solid", width: "200px", height: "75px" , marginLeft: "100px", marginTop: "100px"}}>
+    <div className="cornhole-game" style={{ border: "blue 2px solid", width: "600px", height: "300px", position:"relative"}}>
+      <div className="board" onClick={handleBoardClick} style={{ border: "red 2px solid", width: "200px", height: "75px" , marginLeft: "100px", marginTop: "100px", position:"absolute"}}>
         {/* Render bags at bagCoordinates */}
         {/* {bagCoordinates.map((coordinates, index) => (
           // <div key={index} className="bag" style={{ left: coordinates.x, top: coordinates.y, width: "10px", height: "10px", backgroundColor:"red", position: "fixed" }}></div>
           <div key={index} className="bag" style={{ left: coordinates['x for css'] - 5, top: coordinates['y for css'] - 5, width: "10px", height: "10px", backgroundColor:"red", position: "fixed" }}></div>
         ))} */}
+        <div className='actual-board' style={{ border: "black 1px solid", width: "100px", height: "37.5px", left: "20px", top: "20px", position: "absolute" }} ></div>
       </div>
       {bagCoordinates.map((coordinates, index) => (
-          // <div key={index} className="bag" style={{ left: coordinates.x, top: coordinates.y, width: "10px", height: "10px", backgroundColor:"red", position: "fixed" }}></div>
-          <div key={index} className="bag" style={{ left: coordinates['x for css'] - 5, top: coordinates['y for css'] - 5, width: "10px", height: "10px", backgroundColor:"red", position: "fixed" }}></div>
+          // <div key={index} className="bag" style={{ left: coordinates['x for data'], top: coordinates['y for data'], width: "10px", height: "10px", backgroundColor:"red", position: "absolute" }}></div>
+          <div key={index} className="bag" style={{ left: coordinates['x for css'] - 5, top: coordinates['y for css'] - 5, width: "10px", height: "10px", backgroundColor:"red", position: "absolute" }}></div>
         ))}
     </div>
   );
