@@ -89,7 +89,7 @@ const App = () => {
 
   return (
     <div className='main-div' style={{ flex:true}}>
-      <div className="cornhole-game" style={{ border: "blue 2px solid", width: "1250px", height: "800px", position:"relative"}}>
+      <div className="cornhole-game" style={{ border: "blue 2px solid", width: "800px", height: "550px", position:"relative"}}>
             <div className="board" onClick={handleBoardClick} style={{ border: "black 1px solid", width: "750px", height: "500px" , position:"absolute", top: "15px", left:"15px"}}>
               <div className='hole' style={{ border: "black 1px solid", width: "60px", height: "60px" , position:"absolute", top: "220px", left:"450px", borderRadius:"50%"}}></div>
               <div className='actual-board' style={{ border: "black 1px solid", width: "480px", height: "240px", left: "130px", top: "130px", position: "absolute" }} ></div>
